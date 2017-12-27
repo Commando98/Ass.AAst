@@ -1,0 +1,26 @@
+package javaapplication27;
+
+import java.util.Scanner;
+
+public class JavaApplication27 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num,i,score,max=0;
+        String name = null; 
+        System.out.println("enter the num");
+      num =sc.nextInt();
+      for(i=0;i<num;i++)
+      {
+          System.out.println("enter the name and score");
+          name=sc.next();
+          score=sc.nextInt();
+          
+          if(score>max)
+          {
+              max=score;
+               
+           }
+      }
+      System.out.println("the max score is"+max+"the student name is"+name);
+    }
+}

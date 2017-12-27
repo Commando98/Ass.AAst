@@ -1,0 +1,71 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication39;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class rectangle {
+    double width , hieght ;
+ public   rectangle()
+    {
+        width = 1; 
+        hieght = 1 ;
+    }
+   public rectangle(double w,double h)
+    {
+      this.width = w;
+      this.hieght = h;
+        
+    }
+    public double getArea()
+    {
+        return width * hieght ;
+        
+    }
+    public double  getPerimtetre()
+    {
+        return width * hieght * 2;
+    
+    }
+
+}
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication39;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class JavaApplication39 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double w1 , h1 ,w2 , h2 ;
+        Scanner sc = new Scanner (System.in);
+        w1 = sc.nextDouble();
+        h1 =  sc.nextDouble();
+        rectangle r1 = new rectangle(w1,h1);
+     
+        
+        double area1 = r1.getArea();
+        double per1 = r1.getPerimtetre();
+        System.out.println(+w1+h1+area1+per1);
+        w2 = sc.nextDouble();
+        h2 =  sc.nextDouble();
+           rectangle r2 = new rectangle(w2,h2);
+        double area2 = r2.getArea();
+        double per2 = r2.getPerimtetre();
+         System.out.println(+w2+h2+area2+per2);
+     }
+}

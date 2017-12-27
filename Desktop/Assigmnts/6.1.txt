@@ -1,0 +1,54 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication48;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class JavaApplication48 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        int n, Max = 0;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        String[] grade = new String[n];
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+
+        }
+        for (int i = 0; i < n-1; i++) {
+            if (arr[i] > arr[i+1]) {
+                Max = arr[i];
+            } else {
+                Max= arr[i + 1];
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            if (arr[i]  >= Max-10) {
+                grade[i] = "A";
+            } else if (arr[i] >=Max-20 ){
+                grade[i] = "B";
+            } else if (arr[i] >=Max-30 ) {
+                grade[i] = "C";
+            } else if (arr[i] >=Max-40 ) {
+                grade[i] = "D";
+            } else {
+                grade[i] = "f";
+            }
+
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(grade[i]);
+        }
+    }
+}

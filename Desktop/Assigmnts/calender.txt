@@ -1,0 +1,37 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cleander;
+
+public class Cleander {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       cle C=new cle();
+       System.out.println(C.GetGregorianCalendarmonth()+" "+C.GetGregorianCalendarDayofMonth()+" "+C.GetGregorianCalendarYEAR()+" ");
+    }
+}
+
+package cleander;
+import java.util.GregorianCalendar;
+
+
+public class cle {
+    cle(){
+        
+    }
+     int GetGregorianCalendarYEAR(){
+         return GregorianCalendar.YEAR;
+     }
+      int GetGregorianCalendarmonth(){
+         return GregorianCalendar.MONTH;
+     }
+       int GetGregorianCalendarDayofMonth(){
+         return GregorianCalendar.DAY_OF_MONTH;
+     }
+     
+       
+}

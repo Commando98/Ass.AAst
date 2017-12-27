@@ -1,0 +1,62 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package polygon;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class Polygon {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        regulurpolygon r1 = new regulurpolygon(10,4,5.6,7.8);
+        regulurpolygon r2 = new regulurpolygon(10,4,5.6,7.8);
+        regulurpolygon r3 = new regulurpolygon(10,4,5.6,7.8);
+        System.out.println(r1.getArea()+" "+r2.getArea()+" "+r3.getArea()+" "+r1.getPre());
+        
+    }
+}
+package polygon;
+
+public class regulurpolygon {
+    
+    int N = 3 ;
+    double Side = 1 , X = 0 , Y = 0  ;
+     regulurpolygon(double x,double y){
+         X=x;
+         Y=y;
+         
+     }
+    regulurpolygon(int n , double side , double x , double y  )
+    {
+        N = n ;
+        Side = side ;
+        X = x ;
+        Y = y ;
+    }
+    public double getPre()
+    {
+        return Side*N;  
+    }
+    public double getArea ()
+    {
+        return (N*Math.pow(Side,2))/4*Math.tan(Math.PI/N);
+    }
+    void setN(int n){
+        N=n;
+    }
+    void setSide(double s){
+        Side=s;
+    }
+    void setX(double x){
+        X=x;
+    }
+    void SetY(double y){
+        Y=y;
+    }
+}
