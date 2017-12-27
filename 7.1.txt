@@ -1,0 +1,74 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package time;
+import java.util.Date;
+/**
+ *
+ * @author lenovo-win10
+ */
+public class Time {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws InterruptedException {
+        EmpTime time = new EmpTime(555550000);
+        EmpTime time2 = new EmpTime();
+        System.out.printf("%d:%d:%d%n%n",
+            time2.getH(),
+            time2.getM(),
+            time2.getS());
+    
+        System.out.printf("%d:%d:%d%n%n",time.getH(),time.getM(),time.getS());
+           
+        time2.setTime(2432423534L);
+        System.out.printf("%d:%d:%d%n%n",time2.getH(),time2.getM(),time2.getS());
+    }
+}
+  
+              
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package time;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class EmpTime {
+
+    long Houres, Minutes, Seconds;
+    long Time;
+
+    EmpTime() {
+        Time = System.currentTimeMillis();
+    }
+
+    EmpTime(long time) {
+        Time = time;
+    }
+EmpTime(long H,long M,long S){
+    Houres=H;
+    Minutes=M;
+    Seconds=S;
+
+}
+    
+    void setTime(long x) {
+        Time=x;
+    }
+    public int getH(){
+        return (int)(Time/(1000*60*60))%24; 
+    }
+    public int getM(){
+        return (int)(Time/(1000*60))%24; 
+    }
+    public int getS(){
+        return (int)(Time/1000)%60; 
+    }
+    
+}

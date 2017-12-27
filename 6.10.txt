@@ -1,0 +1,39 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication65;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class JavaApplication65 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int x,i;
+        int arr[]=new int[100];
+        for(i=0;i<100;i++)
+            arr[i]=0;
+        Scanner sc =new Scanner(System.in);
+        for(i=0;i<100;i++){
+        x=sc.nextInt();
+        if(x!=0)
+        {
+            arr[x]++;
+        }
+        else break;
+        }
+            for(i=0;i<100;i++){
+                if(arr[i]!=0)
+                    System.out.println("number "+i+"occure"+arr[i]);
+                
+            }
+        }
+    }
+

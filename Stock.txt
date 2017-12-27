@@ -1,0 +1,60 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package stock;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class Stock {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        String Sympol , name ;
+        double curent , pervious ;
+        Sympol = JOptionPane.showInputDialog(null,"enter the Sympol"); 
+        name = JOptionPane.showInputDialog(null,"enter the name ");
+        curent = sc.nextDouble();
+        pervious = sc.nextDouble();
+        Sttock s1 = new Sttock(Sympol , name , pervious , curent );
+        double x = s1.getChangePercenter();
+        JOptionPane.showMessageDialog(null,"Price-Change persentage = "+x+"t he sympole is "+Sympol + "the name is "+name );
+    }
+}
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package stock;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class Sttock {
+    String Symbole , name ;
+    double perviousClosingPrice , currentClosingPrice ;
+    Sttock()
+    {
+        
+    }
+    Sttock(String S,String N , double pervious , double curent)
+    {
+        Symbole = S ;
+         name = N ;
+         perviousClosingPrice = pervious ;
+         currentClosingPrice = curent ;
+    }
+    public double getChangePercenter()
+    {
+        return currentClosingPrice - perviousClosingPrice ;
+    }
+}

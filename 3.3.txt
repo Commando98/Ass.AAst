@@ -1,0 +1,32 @@
+package  javaapplication28;
+
+import java.util.Scanner;
+public class JavaApplication28 {
+public static void main(String[] args) {
+          Scanner sc=new Scanner(System.in);
+        int num,i,score,max1=0,max2=0;
+        String name = null; 
+        String maxm1 = null,maxm2 = null;
+        System.out.println("enter the num");
+      num =sc.nextInt();
+      for(i=0;i<num;i++)
+      {
+          System.out.println("enter the name and score");
+          name=sc.next();
+          score=sc.nextInt();
+          
+          if(score>max1)
+          {
+              max1=score;
+               maxm1=name;
+           }
+          else if (score>max2)
+          {
+              max2=score;
+               maxm2=name;
+           }
+      }
+      System.out.println("the max score is"+max1+"the student name is"+maxm1);
+      System.out.println("the max score is"+max2+"the student name is"+maxm2);
+    }
+}

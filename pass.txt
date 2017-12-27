@@ -1,0 +1,51 @@
+package valid.pass.or.not;
+
+import java.util.*;
+
+public class ValidPassOrNot {
+public static void validOrNot(String pass)
+{
+    char z = null;
+    int j=0;
+    if(pass.length()<8)
+    {
+        System.out.println("it must be atleast 8 char");
+    }
+    else {
+    for ( int i=0;i<pass.length();i++)
+    {
+        z = pass.charAt(i);
+        if(Character.isDigit(z))
+        {
+         
+               j++;
+               
+        }
+        if (Character.isLetter(z))
+        {
+            continue;
+        }
+         System.out.println("invalid pass");
+    }
+
+    if(j>2)
+{
+ 
+System.out.println("valid pass");
+}
+else {
+         System.out.println("invalid pass");
+    }
+    
+}
+}
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String pass;
+        Scanner sc = new Scanner (System.in);
+        pass=sc.next();
+        validOrNot(pass);
+    }
+}

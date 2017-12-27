@@ -1,0 +1,75 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package accout;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class Accout {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Acc x= new Acc(5454,2000,4.5);
+        x.withdrow(2500);;
+        x.Depsite(3000);
+        System.out.println(x.getBalance()+" "+x.getDate()+" "+x.getInterestRateMonthly());
+    }
+}
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package accout;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+import java.util.Date;
+public class Acc {
+    private int id ;
+    private double balance;
+    private static double InterestRate;
+    Date D;
+    Acc(double x){
+        Date D= new Date();
+        id=0;
+        balance=0.0;
+        InterestRate=x;
+    }
+     Acc(int i,double x,double y){
+        id=i;
+        balance=x;
+        InterestRate=y;
+    }
+    void setId(int x){
+        id=x;
+    }
+    void setBalance(double x){
+        balance=x;
+    }
+    int getId(){
+        return id;
+    }
+    double getBalance(){
+        return balance;
+    }
+    double getInterestRateMonthly(){
+        return balance*(InterestRate/12);
+    }
+    void Depsite(double x){
+        balance+=x;
+    }
+    void withdrow(double x){
+        balance-=x;
+    }
+    Date getDate(){
+        return D; 
+    }
+}

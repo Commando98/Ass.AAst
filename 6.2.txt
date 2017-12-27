@@ -1,0 +1,42 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication49;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author lenovo-win10
+ */
+public class JavaApplication49 {
+
+    
+    public static void main(String[] args) {
+      int x,y,i=0,sum=0,AOE=0,B=0;
+      Scanner sc = new Scanner(System.in);
+      x=sc.nextInt();
+      int [] arr= new int[100];
+      arr[i]=x;
+      while(arr[i]>0)
+      {
+          sum+=arr[i];
+          i++;
+          y=sc.nextInt();
+          arr[i]=y;
+          
+      }
+      float avrege=sum/i;
+      for(int j=0;j<i;j++)
+      {
+          if(arr[j]>avrege || arr[j]==avrege)
+          {
+              AOE++;
+          }
+          else B++;
+      }
+          System.out.println(+AOE+" " +B);
+          
+    }
+}
