@@ -17,8 +17,7 @@ public class JavaApplication27 {
           
           if(score>max)
           {
-             
- max=score;
+             max=score;
                
            }
       }
